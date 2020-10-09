@@ -1,6 +1,9 @@
-from BST import myFunction
+from BST import *
 
-myFunction()
+ourTree = BST()
+ourTree.addNode(5)
+ourTree.addNode(10)
+ourTree.addNode(15)
 
 
 # JAVA CODE FOR MAIN BELOW
