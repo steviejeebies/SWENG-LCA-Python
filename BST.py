@@ -32,17 +32,19 @@ class BST:
         return
 
     def find_lca(self, key1, key2):
-        return self.findLCA(self, self.root, key1, key2).key
+        return self.find_lca_recursive(self.root, key1, key2).key
 
-    def find_lca(self, search_node, key1, key2):
+    def find_lca_recursive(self, search_node, key1, key2):
         if search_node is None:
             return None
         if search_node.key is key1 or search_node.key is key2:
             return search_node
 
-        left_search = self.find_lca(self, search_node.left_child, key1, key2)
-        right_search = self.find_lca(self, search_node.right_child, key1, key2)
+        left_search = self.find_lca_recursive(search_node.left_child, key1, key2)
+        right_search = self.find_lca_recursive(search_node.right_child, key1, key2)
 
-        if left_search is None and right_search is None:
+        if left_search is not None and right_search is not None:
             return search_node
         return left_search if left_search is not None else right_search
+
+
