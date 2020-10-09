@@ -46,5 +46,3 @@ class BST:
         if left_search is not None and right_search is not None:
             return search_node
         return left_search if left_search is not None else right_search
-
-
