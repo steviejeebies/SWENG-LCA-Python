@@ -1,9 +1,12 @@
 from BST import *
 
+# BST will look like this: https://i.ibb.co/1dQdqDD/Untitled.png
 ourTree = BST()
-ourTree.addNode(5)
-ourTree.addNode(10)
-ourTree.addNode(15)
+input_values = [15, 14, 28, 22, 9, 12, 30, 29, 4, 7, 13]
+for x in input_values:
+    ourTree.add_node(x)
+print("done")
+
 
 
 # JAVA CODE FOR MAIN BELOW

@@ -11,12 +11,13 @@ class BST:
     def add_node(self, value):
         if self.root is None:
             self.root = self.Node(value)
+            return
 
         search_node = self.root
         while True:
             if search_node.key is value:
                 break
-            if search_node.key < value:
+            elif value < search_node.key:
                 if search_node.left_child is None:
                     search_node.left_child = self.Node(value)
                     break
