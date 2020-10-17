@@ -31,6 +31,26 @@ class BST:
                     search_node = search_node.right_child
         return
 
+    def find_node(self, value):
+        if self.root is None:
+            return None
+
+        search_node = self.root
+
+        while True:    # if the same number is entered twice, it will not create a new node for the repetition
+            if value == search_node.key:
+                return search_node  # break and return if current node has the same value
+            elif value < search_node.key:
+                if search_node.left_child is None:
+                    return None
+                else:
+                    search_node = search_node.left_child  # if left child present and not equal, search left branch
+            else:   # if (value > search_node.key)
+                if search_node.right_child is None:
+                    return None
+                else:
+                    search_node = search_node.right_child   # if left child present and not equal, search left branch
+
     def find_lca(self, key1, key2):
         return self.find_lca_recursive(self.root, key1, key2).key
 

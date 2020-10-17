@@ -13,3 +13,8 @@ print("LCA of 14 22: ", our_tree.find_lca(14, 22))
 print("LCA of 15 4: ", our_tree.find_lca(15, 4))
 print("LCA of 30 29: ", our_tree.find_lca(30, 29))
 print("LCA of 7 13: ", our_tree.find_lca(7, 13))
+
+print("on tree 7 ", our_tree.find_node(7) is not None)
+print("on tree 99 ", our_tree.find_node(99) is not None)
+
+
