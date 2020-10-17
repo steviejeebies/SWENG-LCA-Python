@@ -52,7 +52,8 @@ class BST:
                     search_node = search_node.right_child   # if left child present and not equal, search left branch
 
     def find_lca(self, key1, key2):
-        return self.find_lca_recursive(self.root, key1, key2).key
+        found_node = self.find_lca_recursive(self.root, key1, key2)
+        return found_node.key if found_node is not None else found_node.key
 
     def find_lca_recursive(self, search_node, key1, key2):
         if search_node is None:
