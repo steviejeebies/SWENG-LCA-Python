@@ -1,4 +1,4 @@
-# Lowest Common Ancestor on BST Tree (Python)
+# Lowest Common Ancestor on Binary Search Tree (Python)
 * All tests passing
 * Code coverage 100%
 
